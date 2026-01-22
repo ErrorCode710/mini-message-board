@@ -1,0 +1,29 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="screen">
+      <div class="messages-container">
+        <ul class="message-list">
+          <% messages.forEach((message)=>  { %>
+            <li>
+                <a href="/read/<%=message.user%>"><%= message.user %></a>
+            </li>
+
+         <% }) %>
+        </ul>
+
+       
+      </div>
+       <a class="navHome" href="/">Menu</a>
+    </div>
+  </body>
+</html>
+
+<!-- <li>Amando</li>
+<li>Mario</li>
+<li>Lucas</li> -->

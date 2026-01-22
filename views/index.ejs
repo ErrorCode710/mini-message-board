@@ -1,0 +1,16 @@
+<!-- index.ejs -->
+<html>
+  <head>
+    <link rel="stylesheet" href="/style.css" />
+    <title>Homepage</title>
+  </head>
+  <body>
+    <ul>
+      <% messages.forEach(message => { %>
+        <li><%= message.text%></li>
+      <% }) %> ;
+    </ul>
+   
+  </body>
+</html>
+

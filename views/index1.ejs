@@ -1,0 +1,41 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="screen">
+      <div class="top-container">
+        <img src="/smsicon.svg" class="sms-icon" alt="nokia 3310 message icon" />
+        <p id="clock"></p>
+      </div>
+      <div class="mid-container">
+        <p class="message-count"><%= messageCount%></p>
+        <p>messages</p>
+        <p>recieved</p>
+      </div>
+      <div class="bot-container">
+        <a href="/read">Read</a>
+        <a href="/new">New Message</a>
+      </div>
+    </div>
+
+    <script>
+      function updateClock() {
+        const now = new Date();
+
+        const time = now.toLocaleTimeString("en-US", {
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+
+        document.getElementById("clock").textContent = time;
+      }
+
+      updateClock();
+      setInterval(updateClock, 60000);
+    </script>
+  </body>
+</html>

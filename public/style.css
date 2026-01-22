@@ -1,0 +1,222 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+input {
+  background-color: var(--bright-fern-2);
+  outline: none;
+  border: none;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
+textarea {
+  background-color: inherit;
+  border: none;
+  resize: none;
+  outline: none;
+}
+textarea,
+textarea:focus,
+textarea:focus-visible {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+/* CSS HSL */
+
+:root {
+  --bright-fern: hsla(103, 46%, 46%, 1);
+  --charcoal-blue: hsla(221, 12%, 27%, 1);
+  --bright-fern-2: hsla(102, 49%, 49%, 1);
+  --dim-grey: hsla(180, 4%, 44%, 1);
+  --charcoal-blue-2: hsla(223, 17%, 30%, 1);
+}
+@font-face {
+  font-family: "NokiaFont";
+  src: url(./nokiafc22.ttf) format(truetype);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--charcoal-blue);
+  font-family: "NokiaFont";
+  font-size: clamp(1rem, 6vw, 4.75rem);
+}
+.screen {
+  background-color: var(--bright-fern-2);
+  min-width: 80%;
+  /* min-height: 90%; */
+  height: 95vh;
+  border-radius: 15px;
+
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.top-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.bot-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: auto;
+  text-align: center;
+}
+.sms-icon {
+  width: 100px;
+  height: 100px;
+}
+.messages-container {
+  max-height: 438px;
+  overflow-y: scroll;
+}
+
+.messages-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.messages-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+  background-color: var(--bright-fern);
+  border-radius: 10px;
+}
+
+.messages-container::-webkit-scrollbar-thumb:hover {
+  background-color: var(--bright-fern);
+}
+textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: var(--bright-fern);
+  border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background-color: var(--bright-fern);
+}
+.message-list li {
+  padding: 1rem;
+}
+.message-list li:hover {
+  background-color: var(--charcoal-blue);
+  color: var(--bright-fern-2);
+}
+
+.navHome {
+  margin-top: auto;
+  text-align: center;
+}
+
+.messageForm {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: auto;
+}
