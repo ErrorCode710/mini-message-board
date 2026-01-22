@@ -124,7 +124,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+
   background-color: var(--charcoal-blue);
   font-family: "NokiaFont";
   font-size: clamp(1rem, 6vw, 4.75rem);
@@ -219,4 +219,12 @@ textarea::-webkit-scrollbar-thumb:hover {
   justify-content: space-between;
 
   margin-top: auto;
+}
+
+@media (max-width: 600px) {
+  body {
+  }
+  .screen {
+    max-height: 50%;
+  }
 }
